@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N1CeR | Portfolio</title>
+    <script>
+        (function() {
+            var savedTheme = localStorage.getItem('selectedTheme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('theme-dark');
+                document.body.className = 'dark-theme';
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="glass-container">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="home.html" class="logo-link">
+                        <span class="full-logo">N1CeR | Developer portfolio</span>
+                        <span class="tablet-logo">N1CeR | DevPortfolio</span>
+                        <span class="mobile-logo">N1CeR | DP</span>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="about.html" data-i18n="about">About me</a></li>
+                        <li><a href="portfolio.html" class="active" data-i18n="portfolio">Portfolio</a></li>
+                        <li><a href="contacts.html" data-i18n="contacts">Contacts</a></li>
+                    </ul>
+                    <div class="header-controls">
+                        <button class="language-switcher" id="language-switcher">EN</button>
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="burger-menu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="portfolio-page">
+        <div class="container">
+            <section class="portfolio-hero">
+                <h1 data-i18n="portfolio-title">My Projects</h1>
+                <p class="portfolio-subtitle" data-i18n="portfolio-subtitle">
+                    Here are some of my recent works. Each project was carefully crafted to solve specific problems.
+                </p>
+            </section>
+            
+            <section class="projects-grid">
+                <!-- Project 1 -->
+                <a href="portfolio-project1.html" class="project-card glass-container">
+                    <div class="project-image" style="background-image: url('https://via.placeholder.com/600x400')"></div>
+                    <div class="project-info">
+                        <h3 data-i18n="project1-title">A-plus</h3>
+                        <p data-i18n="project1-description">A full-featured web application for the A-plus printing company</p>
+                        <span class="project-tag" data-i18n="frontend">Frontend</span>
+                        <span class="project-tag" data-i18n="backend">Backend</span>
+                    </div>
+                </a>
+                
+                <!-- Project 2 -->
+                <a href="portfolio-project2.html" class="project-card glass-container">
+                    <div class="project-image" style="background-image: url('https://via.placeholder.com/600x400')"></div>
+                    <div class="project-info">
+                        <h3 data-i18n="project2-title">Task Management App</h3>
+                        <p data-i18n="project2-description">Productivity application with team collaboration</p>
+                        <span class="project-tag" data-i18n="frontend">Frontend</span>
+                        <span class="project-tag" data-i18n="uiux">UI/UX</span>
+                    </div>
+                </a>
+                
+                <!-- Project 3 -->
+                <a href="portfolio-project3.html" class="project-card glass-container">
+                    <div class="project-image" style="background-image: url('https://via.placeholder.com/600x400')"></div>
+                    <div class="project-info">
+                        <h3 data-i18n="project3-title">Corporate Website</h3>
+                        <p data-i18n="project3-description">Modern responsive website for business</p>
+                        <span class="project-tag" data-i18n="frontend">Frontend</span>
+                        <span class="project-tag" data-i18n="design">Design</span>
+                    </div>
+                </a>
+                
+                <!-- Project 4 -->
+                <a href="portfolio-project4.html" class="project-card glass-container">
+                    <div class="project-image" style="background-image: url('https://via.placeholder.com/600x400')"></div>
+                    <div class="project-info">
+                        <h3 data-i18n="project4-title">Mobile Application</h3>
+                        <p data-i18n="project4-description">Cross-platform app for iOS and Android</p>
+                        <span class="project-tag" data-i18n="mobile">Mobile</span>
+                        <span class="project-tag" data-i18n="uiux">UI/UX</span>
+                    </div>
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <script src="JS/theme.js"></script>
+    <script src="JS/language.js"></script>
+    <script src="JS/main.js"></script>
+    <script>
+        // Добавляем новые переводы
+        const portfolioTranslations = {
+            'en': {
+                'portfolio-title': "My Projects",
+                'portfolio-subtitle': "Here are some of my recent works. Each project was carefully crafted to solve specific problems.",
+                'project1-title': "E-commerce Platform",
+                'project1-description': "Full-featured online store with payment integration",
+                'project2-title': "Task Management App",
+                'project2-description': "Productivity application with team collaboration",
+                'project3-title': "Corporate Website",
+                'project3-description': "Modern responsive website for business",
+                'project4-title': "Mobile Application",
+                'project4-description': "Cross-platform app for iOS and Android",
+                'design': "Design",
+                'mobile': "Mobile"
+            },
+            'ru': {
+                'portfolio-title': "Мои Проекты",
+                'portfolio-subtitle': "Здесь представлены некоторые из моих последних работ. Каждый проект тщательно проработан для решения конкретных задач.",
+                'project1-title': "E-commerce Платформа",
+                'project1-description': "Полнофункциональный интернет-магазин с интеграцией платежей",
+                'project2-title': "Приложение для Управления Задачами",
+                'project2-description': "Продуктивность с возможностью командной работы",
+                'project3-title': "Корпоративный Сайт",
+                'project3-description': "Современный адаптивный сайт для бизнеса",
+                'project4-title': "Мобильное Приложение",
+                'project4-description': "Кроссплатформенное приложение для iOS и Android",
+                'design': "Дизайн",
+                'mobile': "Мобильные"
+            }
+        };
+
+        // Объединяем с существующими переводами
+        Object.keys(portfolioTranslations.en).forEach(key => {
+            translations.en[key] = portfolioTranslations.en[key];
+            translations.ru[key] = portfolioTranslations.ru[key];
+        });
+    </script>
+</body>
+</html>

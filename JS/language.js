@@ -1,0 +1,270 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const languageSwitcher = document.getElementById('language-switcher');
+    const translations = {
+        'en': {
+            'home': 'Home',
+            'about': 'About me',
+            'portfolio': 'Portfolio',
+            'contacts': 'Contacts',
+            'settings': 'Settings',
+            'close': 'Close',
+            'language': 'Language:',
+            'theme': 'Theme:',
+            'light': 'Light',
+            'dark': 'Dark',
+            'approach': 'My Approach to Development',
+            'why-choose': 'Why Choose Me?',
+            'building-text': 'Building websites that work and impress.',
+            'dev-portfolio': 'Developer portfolio',
+            'passion-text': 'Web development is my passion, combining creativity, precision and dedication. I create a flawless experience and reliable applications, putting my soul into every project.',
+            'study-portfolio': 'Study my portfolio',
+            'find-out-more': 'Find out more about me and my path',
+            'get-in-touch': 'Get in touch with me',
+            'story-text': 'Every project is a story waiting to be told. My goal is to make that story impactful, functional, and beautiful.',
+            'expertise-text': 'With a blend of technical expertise and creative vision, I deliver solutions tailored to your needs.',
+            'perfect-balance': 'Perfect Balance',
+            'balance-description': 'A perfect blend of quality, minimalism, modern design and cutting-edge technology',
+            'tech-fusion': 'Tech Fusion',
+            'tech-description': 'When diverse technologies come together, they create something truly extraordinary',
+            'landing-design': 'Landing Page Design',
+            'task-manager': 'Task Manager',
+            'ecommerce-platform': 'E-commerce Platform',
+
+            'web-developer': 'Web Developer',
+            'ai-developer': 'AI Developer',
+            'hero-subtitle': 'I am a web developer specializing in creating dynamic and user-friendly websites. My experience includes using cutting-edge technologies to achieve exceptional results.',
+            'hero-name': 'N1CeR',
+            'developer-portfolio': 'Developer Portfolio',
+            'achievements': 'Achievements',
+            'happy-clients': 'Happy Clients',
+            'years-experience': 'Years Experience',
+            'completed-projects': 'Completed Projects',
+            'frontend-title': 'Frontend Developer',
+            'design-to-code': 'From Design to Code',
+            'responsive-design': 'Responsive Design',
+            'ui-ux': 'UI/UX Designer',
+            'frontend-skills': 'HTML, CSS, JavaScript, React, Tailwind CSS',
+            'backend-title': 'Backend Developer',
+            'server-architecture': 'API Development',
+            'database-optimization': 'Databases',
+            'system-security': 'Security',
+            'backend-skills': 'Node.js, Laravel, MySQL',
+            'copywriting-title': 'Copywriting',
+            'seo-texts': 'SEO texts',
+            'rewriting': 'Rewriting',
+            'creative-texts': 'Sales texts',
+            'copywriting-skills': 'Content creation for websites, blogs and social media',
+            'mobile-title': 'Mobile Development',
+            'cross-platform': 'Cross-platform',
+            'native-apps': 'Native apps',
+            'mobile-ui': 'Mobile UI',
+            'mobile-skills': 'React Native, Flutter, UI adaptation',
+            'education-title': 'My Education',
+            'university-name': 'Information Technology University',
+            'university-details': 'Programming basics, algorithms, data structures',
+            'frontend-course': 'Frontend Development Courses',
+            'frontend-course-details': 'HTML, CSS, JavaScript, React',
+            'backend-course': 'Backend Development Courses',
+            'backend-course-details': 'Node.js, Laravel, Databases',
+            'tools-title': 'My Favorite Tools',
+            'portfolio-title': 'My Projects',
+            'portfolio-subtitle': 'Here are some of my recent works. Each project was carefully crafted to solve specific problems.',
+            'project1-title': 'A-plus',
+            'project1-description': 'A full-featured web application for the A-plus printing company',
+            'project2-title': 'Task Management App',
+            'project2-description': 'Productivity application with team collaboration',
+            'project3-title': 'Corporate Website',
+            'project3-description': 'Modern responsive website for business',
+            'project4-title': 'Mobile Application',
+            'project4-description': 'Cross-platform app for iOS and Android',
+            'view-project': 'View Project',
+            'all-projects': 'All Projects',
+            'ecommerce': 'A-plus',
+            'about-project': 'About Project',
+            'project1-about': 'A fully web-based application has been developed, with a catalog of services, an online service cost calculator, and a shopping cart. The platform has an admin panel for content management.',
+            'technologies': 'Technologies Used',
+            'key-features': 'Key Features',
+            'feature1-title': 'Product Catalog',
+            'feature1-desc': 'Organized display of products with filters and search',
+            'feature2-title': 'Payment System',
+            'feature2-desc': 'Secure payment processing with multiple methods',
+            'feature3-title': 'Admin Panel',
+            'feature3-desc': 'Full control over products, orders and users',
+            'project-screenshots': 'Project Screenshots',
+            'interested-project': 'Interested in this project?',
+            'contact-me': 'Contact me to discuss how I can help with your e-commerce needs',
+            'contact-now': 'Contact Now',
+            'back-to-portfolio': 'Back to Portfolio',
+            'contacts-title': "Let's Work Together",
+            'contacts-subtitle': "Have a project in mind or want to discuss potential opportunities? Feel free to reach out!",
+            'email-title': "Email",
+            'phone-title': "Phone",
+            'telegram-title': "Telegram",
+            'form-title': "Send a Message",
+            'form-name': "Your Name",
+            'form-email': "Email Address",
+            'form-message': "Your Message",
+            'form-submit': "Send Message",
+            'social-title': "Find Me Online",
+            'github': "GitHub",
+            'linkedin': "LinkedIn",
+            'twitter': "Twitter",
+            'instagram': "Instagram",
+            'contact-info': "Contact Information",
+            'get-in-touch': "Get in Touch"
+        },
+        'ru': {
+            'home': 'Главная',
+            'about': 'Обо мне',
+            'portfolio': 'Портфолио',
+            'contacts': 'Контакты',
+            'settings': 'Настройки',
+            'close': 'Закрыть',
+            'language': 'Язык:',
+            'theme': 'Тема:',
+            'light': 'Светлая',
+            'dark': 'Темная',
+            'approach': 'Мой подход к разработке',
+            'why-choose': 'Почему выбирают меня?',
+            'building-text': 'Создание веб-сайтов, которые работают и впечатляют.',
+            'dev-portfolio': 'Портфолио разработчика',
+            'passion-text': 'Веб-разработка - это моя страсть, сочетающая в себе креативность, точность и преданность делу. Я создаю безупречный опыт и надежные приложения, вкладывая душу в каждый проект.',
+            'study-portfolio': 'Изучите мое портфолио',
+            'find-out-more': 'Узнайте больше обо мне и моем пути',
+            'get-in-touch': 'Свяжитесь со мной',
+            'story-text': 'Каждый проект - это история, которая ждет, чтобы ее рассказали. Моя цель - сделать эту историю впечатляющей, функциональной и красивой.',
+            'expertise-text': 'Сочетая технический опыт и творческое видение, я предлагаю решения, адаптированные к вашим потребностям.',
+            'perfect-balance': 'Идеальный Баланс',
+            'balance-description': 'Идеальное сочетание качества, минимализма, современного дизайна и передовых технологий',
+            'tech-fusion': 'Технологический Синтез',
+            'tech-description': 'Когда различные технологии объединяются, они создают нечто поистине уникальное',
+            'landing-design': 'Дизайн Лендингов',
+            'task-manager': 'Менеджер Задач',
+            'ecommerce-platform': 'E-commerce Платформа',
+
+            'web-developer': 'Веб-разработчик',
+            'ai-developer': 'AI Разработчик',
+            'hero-subtitle': 'Я веб-разработчик, специализирующийся на создании динамичных и удобных веб-сайтов. Мой опыт включает использование передовых технологий для достижения выдающихся результатов.',
+            'hero-name': 'N1CeR',
+            'developer-portfolio': 'Портфолио Разработчика',
+            'achievements': 'Достижения',
+            'happy-clients': 'Довольных клиентов',
+            'years-experience': 'Многолетний опыт работы',
+            'completed-projects': 'Завершенные работы',
+            'frontend-title': 'Frontend разработчик',
+            'design-to-code': 'От дизайна к коду',
+            'responsive-design': 'Адаптивный дизайн',
+            'ui-ux': 'UI/UX дизайнер',
+            'frontend-skills': 'HTML, CSS, JavaScript, React, Tailwind CSS',
+            'backend-title': 'Backend разработчик',
+            'server-architecture': 'Разработка API',
+            'database-optimization': 'Базы данных',
+            'system-security': 'Безопасность',
+            'backend-skills': 'Node.js, Laravel, MySQL',
+            'copywriting-title': 'Копирайтинг',
+            'seo-texts': 'SEO тексты',
+            'rewriting': 'Рерайтинг',
+            'creative-texts': 'Продающие тексты',
+            'copywriting-skills': 'Создание контента для сайтов, блогов и соцсетей',
+            'mobile-title': 'Мобильная разработка',
+            'cross-platform': 'Кроссплатформенные',
+            'native-apps': 'Нативные приложения',
+            'mobile-ui': 'Mobile UI',
+            'mobile-skills': 'React Native, Flutter, адаптация интерфейсов',
+            'education-title': 'Мое образование',
+            'university-name': 'Университет информационных технологий',
+            'university-details': 'Основы программирования, алгоритмы, структуры данных',
+            'frontend-course': 'Курсы Frontend разработки',
+            'frontend-course-details': 'HTML, CSS, JavaScript, React',
+            'backend-course': 'Курсы Backend разработки',
+            'backend-course-details': 'Node.js, Laravel, базы данных',
+            'tools-title': 'Мои любимые инструменты',
+            'portfolio-title': 'Мои Проекты',
+            'portfolio-subtitle': 'Здесь представлены некоторые из моих последних работ. Каждый проект тщательно проработан для решения конкретных задач.',
+            'project1-title': 'А-плюс',
+            'project1-description': 'Полнофункциональный веб-приложение для типографии А-плюс',
+            'project2-title': 'Приложение для Управления Задачами',
+            'project2-description': 'Приложение для продуктивности с возможностью командной работы',
+            'project3-title': 'Корпоративный Сайт',
+            'project3-description': 'Современный адаптивный сайт для бизнеса',
+            'project4-title': 'Мобильное Приложение',
+            'project4-description': 'Кроссплатформенное приложение для iOS и Android',
+            'view-project': 'Посмотреть Проект',
+            'all-projects': 'Все Проекты',
+            'ecommerce': 'E-commerce',
+            'about-project': 'О Проекте',
+            'project1-about': 'Было разработано полностью веб-приложение с каталогом услуг, онлайн-калькулятором стоимости услуг и корзиной покупок. Платформа имеет панель администратора для управления контентом.',
+            'technologies': 'Использованные Технологии',
+            'key-features': 'Ключевые Особенности',
+            'feature1-title': 'Каталог Товаров',
+            'feature1-desc': 'Упорядоченное отображение товаров с фильтрами и поиском',
+            'feature2-title': 'Платежная Система',
+            'feature2-desc': 'Безопасная обработка платежей с несколькими методами',
+            'feature3-title': 'Панель Администратора',
+            'feature3-desc': 'Полный контроль над товарами, заказами и пользователями',
+            'project-screenshots': 'Скриншоты Проекта',
+            'interested-project': 'Заинтересованы в таком проекте?',
+            'contact-me': 'Свяжитесь со мной, чтобы обсудить, как я могу помочь с вашими e-commerce потребностями',
+            'contact-now': 'Связаться',
+            'back-to-portfolio': 'Вернуться в Портфолио',
+            'contacts-title': "Давайте Работать Вместе",
+            'contacts-subtitle': "Есть проект или хотите обсудить возможности сотрудничества? Свяжитесь со мной!",
+            'email-title': "Email",
+            'phone-title': "Телефон",
+            'telegram-title': "Telegram",
+            'form-title': "Отправить Сообщение",
+            'form-name': "Ваше Имя",
+            'form-email': "Email Адрес",
+            'form-message': "Ваше Сообщение",
+            'form-submit': "Отправить",
+            'social-title': "Я в Соцсетях",
+            'github': "GitHub",
+            'linkedin': "LinkedIn",
+            'twitter': "Twitter",
+            'instagram': "Instagram",
+            'contact-info': "Контактная Информация",
+            'get-in-touch': "Связаться"
+        }
+    };
+
+    // Проверяем сохраненный язык
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    updateTranslations(savedLang);
+    languageSwitcher.textContent = savedLang === 'en' ? 'EN' : 'RU';
+
+    // Переключение языка
+    languageSwitcher.addEventListener('click', function() {
+        const currentLang = this.textContent === 'EN' ? 'en' : 'ru';
+        const newLang = currentLang === 'en' ? 'ru' : 'en';
+        
+        this.textContent = newLang === 'en' ? 'EN' : 'RU';
+        updateTranslations(newLang);
+        localStorage.setItem('selectedLanguage', newLang);
+    });
+
+    function updateTranslations(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
+
+        // Обновляем тексты без data-i18n
+        const buildingText = document.querySelector('.small-text');
+        if (buildingText) buildingText.textContent = translations[lang]['building-text'];
+        
+        const devPortfolio = document.querySelector('.static-text');
+        if (devPortfolio) devPortfolio.textContent = translations[lang]['dev-portfolio'];
+        
+        const passionText = document.querySelector('.description-text');
+        if (passionText) passionText.textContent = translations[lang]['passion-text'];
+        
+        const sideSmallTexts = document.querySelectorAll('.side-small-text');
+        if (sideSmallTexts.length > 0) {
+            sideSmallTexts[0].textContent = translations[lang]['study-portfolio'];
+            if (sideSmallTexts.length > 1) sideSmallTexts[1].textContent = translations[lang]['find-out-more'];
+            if (sideSmallTexts.length > 2) sideSmallTexts[2].textContent = translations[lang]['get-in-touch'];
+        }
+    }
+});

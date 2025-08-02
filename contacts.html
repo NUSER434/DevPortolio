@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N1CeR | Contacts</title>
+    <script>
+        (function() {
+            var savedTheme = localStorage.getItem('selectedTheme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('theme-dark');
+                document.body.className = 'dark-theme';
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Floating background elements -->
+    <div class="bg-circles">
+        <div class="bg-circle left"></div>
+        <div class="bg-circle right"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="glass-container">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="home.html" class="logo-link">
+                        <span class="full-logo">N1CeR | Developer portfolio</span>
+                        <span class="tablet-logo">N1CeR | DevPortfolio</span>
+                        <span class="mobile-logo">N1CeR | DP</span>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="about.html" data-i18n="about">About me</a></li>
+                        <li><a href="portfolio.html" data-i18n="portfolio">Portfolio</a></li>
+                        <li><a href="contacts.html" class="active" data-i18n="contacts">Contacts</a></li>
+                    </ul>
+                    <div class="header-controls">
+                        <button class="language-switcher" id="language-switcher">EN</button>
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="burger-menu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="contacts-page">
+        <div class="container">
+            <section class="contacts-hero">
+                <div class="contacts-left glass-container">
+                    <h1 data-i18n="contacts-title">Let's Work Together</h1>
+                    <p class="contacts-subtitle" data-i18n="contacts-subtitle">
+                        Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3 data-i18n="email-title">Email</h3>
+                                <a href="mailto:contact@nicer.dev">contact@nicer.dev</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h3 data-i18n="phone-title">Phone</h3>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-telegram"></i>
+                            <div>
+                                <h3 data-i18n="telegram-title">Telegram</h3>
+                                <a href="https://t.me/nicer_dev" target="_blank">@nicer_dev</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contacts-right glass-container">
+                    <h2 data-i18n="form-title">Send a Message</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-i18n="form-name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-i18n="form-email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" data-i18n="form-message">Your Message</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" data-i18n="form-submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
+            
+            <section class="social-section">
+                <h2 data-i18n="social-title">Find Me Online</h2>
+                <div class="social-links">
+                    <a href="#" class="social-link" data-i18n="github">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" class="social-link" data-i18n="linkedin">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="#" class="social-link" data-i18n="twitter">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <a href="#" class="social-link" data-i18n="instagram">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="JS/theme.js"></script>
+    <script src="JS/language.js"></script>
+    <script src="JS/main.js"></script>
+    <script>
+        // Добавляем новые переводы
+        const newTranslations = {
+            'en': {
+                'contacts-title': "Let's Work Together",
+                'contacts-subtitle': "Have a project in mind or want to discuss potential opportunities? Feel free to reach out!",
+                'email-title': "Email",
+                'phone-title': "Phone",
+                'telegram-title': "Telegram",
+                'form-title': "Send a Message",
+                'form-name': "Your Name",
+                'form-email': "Email Address",
+                'form-message': "Your Message",
+                'form-submit': "Send Message",
+                'social-title': "Find Me Online",
+                'github': "GitHub",
+                'linkedin': "LinkedIn",
+                'twitter': "Twitter",
+                'instagram': "Instagram"
+            },
+            'ru': {
+                'contacts-title': "Давайте Работать Вместе",
+                'contacts-subtitle': "Есть проект или хотите обсудить возможности сотрудничества? Свяжитесь со мной!",
+                'email-title': "Email",
+                'phone-title': "Телефон",
+                'telegram-title': "Telegram",
+                'form-title': "Отправить Сообщение",
+                'form-name': "Ваше Имя",
+                'form-email': "Email Адрес",
+                'form-message': "Ваше Сообщение",
+                'form-submit': "Отправить",
+                'social-title': "Я в Соцсетях",
+                'github': "GitHub",
+                'linkedin': "LinkedIn",
+                'twitter': "Twitter",
+                'instagram': "Instagram"
+            }
+        };
+
+        // Объединяем с существующими переводами
+        Object.keys(newTranslations.en).forEach(key => {
+            translations.en[key] = newTranslations.en[key];
+            translations.ru[key] = newTranslations.ru[key];
+        });
+    </script>
+</body>
+</html>

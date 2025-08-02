@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N1CeR | Portfolio</title>
+    <script>
+        (function() {
+            var savedTheme = localStorage.getItem('selectedTheme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('theme-dark');
+                document.body.className = 'dark-theme';
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="glass-container">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="home.html" class="logo-link">
+                        <span class="full-logo">N1CeR | Developer portfolio</span>
+                        <span class="tablet-logo">N1CeR | DevPortfolio</span>
+                        <span class="mobile-logo">N1CeR | DP</span>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="about.html" data-i18n="about">About me</a></li>
+                        <li><a href="portfolio.html" class="active" data-i18n="portfolio">Portfolio</a></li>
+                        <li><a href="contacts.html" data-i18n="contacts">Contacts</a></li>
+                    </ul>
+                    <div class="header-controls">
+                        <button class="language-switcher" id="language-switcher">EN</button>
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="burger-menu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <main class="project-page">
+        <div class="container">
+            <section class="project-header">
+                <div class="project-meta">
+                    <span class="project-category" data-i18n="ecommerce">A-plus</span>
+                    <h1 data-i18n="project1-title">A-plus</h1>
+                    <p class="project-excerpt" data-i18n="project1-description">A full-featured web application for the A-plus printing company</p>
+                </div>
+                <div class="project-image-main" style="background-image: url('https://via.placeholder.com/1200x600')"></div>
+            </section>
+            
+            <section class="project-details">
+                <div class="project-about glass-container">
+                    <h2 data-i18n="about-project">About Project</h2>
+                    <p data-i18n="project1-about">
+                        A fully web-based application has been developed, with a catalog of services, an online service cost calculator, and a shopping cart. The platform has an admin panel for content management.
+                    </p>
+                    
+                    <div class="project-tech">
+                        <h3 data-i18n="technologies">Technologies Used</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Laravel</li>
+                            <li>Tailwind CSS</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-features">
+                    <h2 data-i18n="key-features">Key Features</h2>
+                    <div class="features-grid">
+                        <div class="feature-card glass-container">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3 data-i18n="feature1-title">Product Catalog</h3>
+                            <p data-i18n="feature1-desc">Organized display of products with filters and search</p>
+                        </div>
+                        
+                        <div class="feature-card glass-container">
+                            <i class="fas fa-credit-card"></i>
+                            <h3 data-i18n="feature2-title">Payment System</h3>
+                            <p data-i18n="feature2-desc">Secure payment processing with multiple methods</p>
+                        </div>
+                        
+                        <div class="feature-card glass-container">
+                            <i class="fas fa-user-cog"></i>
+                            <h3 data-i18n="feature3-title">Admin Panel</h3>
+                            <p data-i18n="feature3-desc">Full control over products, orders and users</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="project-gallery">
+                <h2 data-i18n="project-screenshots">Project Screenshots</h2>
+                <div class="gallery-grid">
+                    <img src="https://via.placeholder.com/600x400" alt="Screenshot 1">
+                    <img src="https://via.placeholder.com/600x400" alt="Screenshot 2">
+                    <img src="https://via.placeholder.com/600x400" alt="Screenshot 3">
+                </div>
+            </section>
+            
+            <section class="project-cta glass-container">
+                <h2 data-i18n="interested-project">Interested in this project?</h2>
+                <p data-i18n="contact-me">Contact me to discuss how I can help with your e-commerce needs</p>
+                <a href="contacts.html" class="cta-button" data-i18n="contact-now">Contact Now</a>
+            </section>
+        </div>
+    </main>
+
+    <script src="JS/theme.js"></script>
+    <script src="JS/language.js"></script>
+    <script src="JS/main.js"></script>
+    <script>
+        // Добавляем переводы для страницы проекта
+        const projectTranslations = {
+            'en': {
+                'ecommerce': "E-commerce",
+                'about-project': "About Project",
+                'project1-about': "Developed a complete e-commerce solution with product catalog, shopping cart, user accounts and payment system integration. The platform supports multiple payment methods and has an admin panel for content management.",
+                'technologies': "Technologies Used",
+                'key-features': "Key Features",
+                'feature1-title': "Product Catalog",
+                'feature1-desc': "Organized display of products with filters and search",
+                'feature2-title': "Payment System",
+                'feature2-desc': "Secure payment processing with multiple methods",
+                'feature3-title': "Admin Panel",
+                'feature3-desc': "Full control over products, orders and users",
+                'project-screenshots': "Project Screenshots",
+                'interested-project': "Interested in this project?",
+                'contact-me': "Contact me to discuss how I can help with your e-commerce needs",
+                'contact-now': "Contact Now"
+            },
+            'ru': {
+                'ecommerce': "E-commerce",
+                'about-project': "О Проекте",
+                'project1-about': "Разработано полное e-commerce решение с каталогом товаров, корзиной покупок, учетными записями пользователей и интеграцией платежной системы. Платформа поддерживает несколько способов оплаты и имеет панель администратора для управления контентом.",
+                'technologies': "Использованные Технологии",
+                'key-features': "Ключевые Особенности",
+                'feature1-title': "Каталог Товаров",
+                'feature1-desc': "Упорядоченное отображение товаров с фильтрами и поиском",
+                'feature2-title': "Платежная Система",
+                'feature2-desc': "Безопасная обработка платежей с несколькими методами",
+                'feature3-title': "Панель Администратора",
+                'feature3-desc': "Полный контроль над товарами, заказами и пользователями",
+                'project-screenshots': "Скриншоты Проекта",
+                'interested-project': "Заинтересованы в таком проекте?",
+                'contact-me': "Свяжитесь со мной, чтобы обсудить, как я могу помочь с вашими e-commerce потребностями",
+                'contact-now': "Связаться"
+            }
+        };
+
+        // Объединяем с существующими переводами
+        Object.keys(projectTranslations.en).forEach(key => {
+            translations.en[key] = projectTranslations.en[key];
+            translations.ru[key] = projectTranslations.ru[key];
+        });
+    </script>
+</body>
+</html>

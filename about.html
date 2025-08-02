@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N1CeR | About Me</title>
+    <script>
+        // Применяем тему до загрузки страницы
+        (function() {
+            var savedTheme = localStorage.getItem('selectedTheme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('theme-dark');
+                document.body.className = 'dark-theme';
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="glass-container">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="home.html" class="logo-link">
+                        <span class="full-logo">N1CeR | Developer portfolio</span>
+                        <span class="tablet-logo">N1CeR | DevPortfolio</span>
+                        <span class="mobile-logo">N1CeR | DP</span>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="about.html" data-i18n="about">About me</a></li>
+                        <li><a href="portfolio.html" data-i18n="portfolio">Portfolio</a></li>
+                        <li><a href="contacts.html" data-i18n="contacts">Contacts</a></li>
+                    </ul>
+                    
+                    <div class="header-controls">
+                        <!-- Кнопка переключения языка -->
+                        <button class="language-switcher" id="language-switcher">EN</button>
+                        
+                        <!-- Переключатель темы -->
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="burger-menu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="about-page">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="about-hero">
+                <div class="hero-left glass-container">
+                    <div class="hero-tags">
+                        <span class="tag" data-i18n="web-developer">Web Developer</span>
+                        <span class="tag" data-i18n="ai-developer">AI Developer</span>
+                    </div>
+                    <p class="hero-subtitle" data-i18n="hero-subtitle">
+                        I am a web developer specializing in creating dynamic and user-friendly websites. 
+                        My experience is using cutting-edge technology to achieve exceptional results.
+                    </p>
+                    <h1 class="hero-title" data-i18n="hero-name">N1CeR</h1>
+                </div>
+                <div class="hero-right glass-container">
+                    <div class="avatar-switcher">
+                        <div class="avatar-wrapper">
+                            <img src="img/avatar.jpg" alt="N1CeR Avatar" class="avatar active">
+                            <img src="img/avatar1.jpg" alt="N1CeR Avatar" class="avatar">
+                        </div>
+                        <div class="avatar-border"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Обновленная stats-section -->
+            <section class="stats-section">
+            <div class="container">
+                <h2 class="stats-title" data-i18n="achievements">Достижения</h2>
+                
+                <div class="stats-grid">
+                <div class="stat-card stat-card-1 glass-container">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label" data-i18n="happy-clients">Довольных клиентов</div>
+                </div>
+                
+                <div class="stat-card stat-card-2 glass-container">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label" data-i18n="years-experience">Многолетний опыт работы</div>
+                </div>
+                
+                <div class="stat-card stat-card-3 glass-container">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label" data-i18n="completed-projects">Завершенные работы</div>
+                </div>
+                </div>
+            </div>
+            </section>
+
+            <!-- Обновленная skills-section -->
+            <!-- Обновленная skills-section с иллюстрациями -->
+            <section class="skills-section">
+            <div class="container">
+                <div class="skills-grid">
+                <!-- Frontend Developer -->
+                <div class="skill-column glass-container">
+                    <h3 class="skill-title" data-i18n="frontend-title">Frontend Developer</h3>
+                    <div class="skill-tags">
+                    <span class="skill-tag" data-i18n="design-to-code">От дизайна к коду</span>
+                    <span class="skill-tag" data-i18n="responsive-design">Адаптивный дизайн</span>
+                    <span class="skill-tag" data-i18n="ui-ux">UI/UX Designer</span>
+                    </div>
+                    <p class="skill-description" data-i18n="frontend-skills">
+                    HTML, CSS, JavaScript, React, Tailwind CSS
+                    </p>
+                    <div class="skill-illustration">
+                    <div class="website-illustration">
+                        <div class="browser-window">
+                        <div class="browser-controls">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="website-preview">
+                            <div class="header-line"></div>
+                            <div class="content-line short"></div>
+                            <div class="content-line"></div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                
+                <!-- Backend Developer -->
+                <div class="skill-column glass-container">
+                    <h3 class="skill-title" data-i18n="backend-title">Backend Developer</h3>
+                    <div class="skill-tags">
+                    <span class="skill-tag" data-i18n="server-architecture">API Development</span>
+                    <span class="skill-tag" data-i18n="database-optimization">Базы данных</span>
+                    <span class="skill-tag" data-i18n="system-security">Безопасность</span>
+                    </div>
+                    <p class="skill-description" data-i18n="backend-skills">
+                    Node.js, Laravel, MySQL
+                    </p>
+                    <div class="skill-illustration">
+                    <div class="server-illustration">
+                        <div class="server-rack">
+                        <div class="server-layer"></div>
+                        <div class="server-layer"></div>
+                        <div class="server-layer"></div>
+                        <div class="server-lights">
+                            <span class="light green"></span>
+                            <span class="light yellow"></span>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                
+                <!-- Копирайтинг -->
+                <div class="skill-column glass-container">
+                    <h3 class="skill-title" data-i18n="copywriting-title">Копирайтинг</h3>
+                    <div class="skill-tags">
+                    <span class="skill-tag" data-i18n="seo-texts">SEO тексты</span>
+                    <span class="skill-tag" data-i18n="rewriting">Рерайтинг</span>
+                    <span class="skill-tag" data-i18n="creative-texts">Продающие тексты</span>
+                    </div>
+                    <p class="skill-description" data-i18n="copywriting-skills">
+                    Создание контента для сайтов, блогов и соцсетей
+                    </p>
+                    <div class="skill-illustration">
+                    <div class="text-illustration">
+                        <div class="paper-sheet">
+                        <div class="text-line"></div>
+                        <div class="text-line short"></div>
+                        <div class="text-line"></div>
+                        </div>
+                        <div class="pen-icon"></div>
+                    </div>
+                    </div>
+                </div>
+                
+                <!-- Мобильная разработка -->
+                <div class="skill-column glass-container">
+                    <h3 class="skill-title" data-i18n="mobile-title">Мобильная разработка</h3>
+                    <div class="skill-tags">
+                    <span class="skill-tag" data-i18n="cross-platform">Кроссплатформенные</span>
+                    <span class="skill-tag" data-i18n="native-apps">Нативные приложения</span>
+                    <span class="skill-tag" data-i18n="mobile-ui">Mobile UI</span>
+                    </div>
+                    <p class="skill-description" data-i18n="mobile-skills">
+                    React Native, Flutter, адаптация интерфейсов
+                    </p>
+                    <div class="skill-illustration">
+                    <div class="mobile-illustration">
+                        <div class="smartphone">
+                        <div class="screen">
+                            <div class="app-icon blue"></div>
+                            <div class="app-icon red"></div>
+                            <div class="app-icon green"></div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+
+            <!-- Обновленная education-section -->
+            <section class="education-section">
+            <div class="education-container">
+                <h2 class="section-title" data-i18n="education-title">Мое образование</h2>
+                <div class="divider-line"></div>
+                
+                <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-year">2021-2025</div>
+                    <div class="education-info">
+                    <h3 class="education-place" data-i18n="university-name">Международный институт дизайна и сервиса</h3>
+                    <p class="education-details" data-i18n="university-details">
+                        Основы программирования, базы данных, алгоритмы и структуры данных, веб-разработка
+                    </p>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-year">2025</div>
+                    <div class="education-info">
+                    <h3 class="education-place" data-i18n="frontend-course">Продвинутый курс Frontend разработки</h3>
+                    <p class="education-details" data-i18n="frontend-course-details">
+                        Углубленное изучение React, оптимизация производительности, современные подходы
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+
+            <!-- Обновленная tools-section -->
+            <section class="tools-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="tools-title">Мои инструменты</h2>
+                
+                <div class="tools-grid">
+                <!-- Первый ряд -->
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                    <span>HTML</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                    <span>CSS</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                    <span>React.js</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel">
+                    <span>Laravel</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind">
+                    <span>Tailwind CSS</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                    <span>Node.js</span>
+                </div>
+                
+                <!-- Второй ряд -->
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    <span>GIT</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">
+                    <span>VS Code</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                    <span>Figma</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                    <span>MySQL</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                    <span>GitHub</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm">
+                    <span>npm</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" alt="Ubuntu">
+                    <span>Ubuntu</span>
+                </div>
+                </div>
+            </div>
+            </section>
+        </div>
+    </main>
+
+
+    <script src="JS/theme.js"></script>
+    <script src="JS/language.js"></script>
+    <script src="JS/about.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/avatar.js"></script>
+</body>
+</html>
